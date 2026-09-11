@@ -76,11 +76,11 @@ export async function readPdf(
   const pdf = await pdfjs();
   const task = pdf.getDocument({
     data,
-    cMapUrl: "/pdf-assets/cmaps/",
+    cMapUrl: `${import.meta.env.BASE_URL}pdf-assets/cmaps/`,
     cMapPacked: true,
-    standardFontDataUrl: "/pdf-assets/standard_fonts/",
-    wasmUrl: "/pdf-assets/wasm/",
-    iccUrl: "/pdf-assets/iccs/",
+    standardFontDataUrl: `${import.meta.env.BASE_URL}pdf-assets/standard_fonts/`,
+    wasmUrl: `${import.meta.env.BASE_URL}pdf-assets/wasm/`,
+    iccUrl: `${import.meta.env.BASE_URL}pdf-assets/iccs/`,
   });
   task.onPassword = () => {
     task.destroy();

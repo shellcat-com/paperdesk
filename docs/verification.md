@@ -1,6 +1,6 @@
 # Release verification
 
-Verified September 11, 2026 with `npm run verify` against the production build, including the Vercel Content Security Policy in the local preview server.
+Verified September 11, 2026 with `npm run verify` against the production build, including the HTML Content Security Policy and GitHub Pages `/paperdesk/` asset paths.
 
 - ESLint: passed.
 - TypeScript and Vite production build: passed.

@@ -58,7 +58,7 @@ async function noOverflow(page: Page) {
   ).toBe(true);
 }
 test.beforeEach(async ({ page }) => {
-  await page.goto("/");
+  await page.goto("./");
 });
 test("home and editor work at desktop, tablet, and narrow phone widths", async ({
   page,

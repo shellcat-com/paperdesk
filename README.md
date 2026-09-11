@@ -2,7 +2,7 @@
 
 A calm, local document editor. Open a file, make a correction, and leave with a new copy.
 
-**[Open Paperdesk](https://paperdesk-omega.vercel.app)** · [Research and supported features](docs/research.md) · [Verification](docs/verification.md)
+**[Open Paperdesk](https://shellcat-com.github.io/paperdesk/)** · [Research and supported features](docs/research.md) · [Verification](docs/verification.md)
 
 ![Paperdesk workspace](docs/screenshots/home-1440.png)
 
@@ -57,7 +57,7 @@ Inputs are limited to 30 MB, PDFs to 60 pages, and cumulative rendered pixels to
 
 ## Stack
 
-React, TypeScript, Vite, Tiptap/ProseMirror, PDF.js, pdf-lib, Mammoth, docx, DOMPurify, localForage, Tesseract.js, html2pdf.js, Lucide, and locally served Figtree fonts. Heavy editor, parser, and export code loads on demand. Vercel serves the static application with security headers.
+React, TypeScript, Vite, Tiptap/ProseMirror, PDF.js, pdf-lib, Mammoth, docx, DOMPurify, localForage, Tesseract.js, html2pdf.js, Lucide, and locally served Figtree fonts. Heavy editor, parser, and export code loads on demand. GitHub Pages serves the static application. The production HTML includes a Content Security Policy and a no-referrer policy.
 
 ## Research and reusable skill
 
@@ -68,13 +68,13 @@ Install the skill by copying `skills/paperdesk-editor` into your Codex skills di
 
 ## Deployment
 
-The repository includes `vercel.json`. Import the GitHub repository into Vercel with the Vite framework preset, or deploy with an authenticated Vercel CLI:
+GitHub Pages is the only deployment target. In this repository's Settings → Pages, set the source to **GitHub Actions**. The workflow verifies the application, uploads `dist/`, and deploys the passing build to https://shellcat-com.github.io/paperdesk/ on pushes to `main`.
 
-```sh
-vercel --prod
-```
+Production assets use the `/paperdesk/` base path. Local development stays at `http://localhost:5178/`; production preview is `http://localhost:5178/paperdesk/`.
 
-No environment secrets are required. The GitHub Actions workflow runs the verification suite on pushes to `main` and pull requests.
+## Project separation
+
+Paperdesk has its own Git repository, GitHub Pages site, deployment workflow, and local directory at `/Users/biswaskhatiwada/Developer/paperdesk`. It does not share source files, deployment configuration, or Git history with the portfolio repository. Do not add Paperdesk to the portfolio or deploy it through the portfolio's hosting project.
 
 ## License
 

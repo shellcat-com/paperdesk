@@ -8,7 +8,7 @@ export default defineConfig({
   retries: process.env.CI ? 1 : 0,
   reporter: [["list"], ["html", { open: "never" }]],
   use: {
-    baseURL: process.env.TEST_URL || "http://127.0.0.1:5178",
+    baseURL: process.env.TEST_URL || "http://127.0.0.1:5178/paperdesk/",
     trace: "retain-on-failure",
     screenshot: "only-on-failure",
   },
@@ -21,7 +21,7 @@ export default defineConfig({
     ? undefined
     : {
         command: "npm run preview -- --port 5178",
-        url: "http://127.0.0.1:5178",
+        url: "http://127.0.0.1:5178/paperdesk/",
         reuseExistingServer: !process.env.CI,
       },
 });

@@ -6,6 +6,8 @@ export default tseslint.config(
     ignores: [
       "dist/**",
       "node_modules/**",
+      "public/pdf-assets/**",
+      ".vercel/**",
       "playwright-report/**",
       "test-results/**",
     ],
