@@ -41,6 +41,9 @@ async function upload(
     .setInputFiles({ buffer, name, mimeType });
   await expect(page.getByLabel("Document name")).toBeVisible();
   await expect(page.locator(".busy-overlay")).toHaveCount(0);
+  await expect(
+    page.locator(".document-prose, .pdf-canvas").first(),
+  ).toBeVisible();
 }
 async function exportFile(page: Page, label: RegExp) {
   await page.getByRole("button", { name: "Export", exact: true }).click();
