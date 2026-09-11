@@ -2,6 +2,8 @@
 
 A calm, local document editor. Open a file, make a correction, and leave with a new copy.
 
+**[Open Paperdesk](https://paperdesk-omega.vercel.app)** · [Research and supported features](docs/research.md) · [Verification](docs/verification.md)
+
 ![Paperdesk workspace](docs/screenshots/home-1440.png)
 
 ## What it does
